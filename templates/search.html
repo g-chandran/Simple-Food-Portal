@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Search Results</h1>
+{% for food in object_list %}
+        <div class="food-list">
+            <a href="{% url 'detail' food.pk %}">
+                <img src="{{ food.food_pic.url }}" alt="{{ food.food_name }}" width=200 height=200>
+                <h1><b>{{ food.food_name }}</b></h1>
+                <small>{{ food.food_type }}</small>
+                <h2>Rs. {{ food.food_price }}/-</h2>
+            </a>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

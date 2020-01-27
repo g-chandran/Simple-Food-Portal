@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your order has been placed!</h1>
+<form action="{% url 'home' %}">
+    <button type="submit">Continue shopping</button>
+</form>
+{% endblock content %}

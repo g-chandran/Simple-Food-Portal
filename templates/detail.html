@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <img src="{{ object.food_pic.url }}" alt="{{ food.food_name }}" width=500 height=300>
+    <h1>{{ object.food_name }}</h1>
+    <small>{{ object.food_type }}</small>
+    <h2>Rs. {{ object.food_price }}/-</h2>
+    <legend>{{ object.food_description }}</legend>
+</div>
+<br>
+<div>
+    <form action="{% url 'confirm' %}" method="get" >
+        <textarea name="" id="" cols="30" rows="10" placeholder="Enter your address here"></textarea>
+        <button type="submit">Done</button>
+        <button type="reset">Reset</button>
+    </form>
+</div>
+{% endblock content %}
